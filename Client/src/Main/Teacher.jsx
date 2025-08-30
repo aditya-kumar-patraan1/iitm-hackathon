@@ -1,5 +1,5 @@
 import React from "react";
-import GoodMorning from "../../src/assets/HeroImage.png";
+import GoodMorning from "../../src/assets/heroImage.png";
 const Teacher = () => {
   const profiles = [
     {
