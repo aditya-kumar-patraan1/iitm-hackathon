@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const imageColumns = [
   [
     { src: "/smiling-woman-outdoors.png" },
-    { src: "/casual-man-sunglasses.png" },
+    { src: "/peaceful-yoga-meditation.png" },
     { src: "/family-cooking.png" },
     { src: "/person-reading.png" },
     { src: "/friends-laughing-coffee.png" },
@@ -13,27 +14,30 @@ const imageColumns = [
     { src: "/cute-dog-hat.png" },
     { src: "/couple-walking-park.png" },
     { src: "/child-playing-garden.png" },
-    { src: "/person-working-laptop.png" },
-    { src: "/friends-hiking-nature.png" },
-    { src: "/family-dinner.png" },
+    { src: "/family-cooking.png" },
+    { src: "/cute-dog-hat.png" },
+    { src: "/peaceful-yoga-meditation.png" },
   ],
   [
-    { src: "/cozy-sleeping-cat.png" },
-    { src: "/home-workout.png" },
-    { src: "/kids-playing.png" },
-    { src: "/meditation-nature.png" },
-    { src: "/coffee-morning.png" },
-    { src: "/sunset-walk.png" },
+    { src: "/smiling-woman-outdoors.png" },
+    { src: "/peaceful-yoga-meditation.png" },
+    { src: "/family-cooking.png" },
+    { src: "/person-reading.png" },
+    { src: "/friends-laughing-coffee.png" },
+    { src: "/peaceful-yoga-meditation.png" },
   ],
 ];
 
 const squareSize = 175;
 
 export default function Component() {
+
+  const Navigate=useNavigate();
+
   return (
-    <div className="h-screen bg-gradient-to-br flex justify-center bg-[#FFFFFF] w-screen">
-      <div className="w-screen px-8 lg:px-12 bg-[#FFFFFF]">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className="h-screen bg-gradient-to-br flex justify-center bg-[#FFFFFF]  w-screen ">
+      <div className="w-screen h-[100%] px-8 lg:px-12 bg-[#FFFFFF] ">
+        <div className="grid lg:grid-cols-2 gap-12 h-[100%] items-center">
           {/* Text Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -45,11 +49,12 @@ export default function Component() {
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
                 Get a glimpse into how expert teachers incorporate mindfulness into real-life situations like parenting, running, and even dishwashing. Explore actionable practices that bring mindfulness into daily moments, making it easy to connect with your practice in the midst of your busy life.
               </p>
+            <button className="bg-white block mx-0 border border-black text-black px-5 p-3 text-sm rounded-full w-fit h-auto  hover:text-white hover:bg-black font-bold cursor-pointer hover:shadow shadow-gray-500 transition-all duration-300" onClick={()=>Navigate("/LearnMorePage")}>Learn for free</button>
             </div>
           </div>
 
           {/* Image Columns */}
-          <div className="relative h-[600px] overflow-hidden">
+          <div className="relative h-full overflow-hidden bg-transparent">
             <div className="flex gap-4 h-full">
               {imageColumns.map((column, columnIndex) => (
                 <div key={columnIndex} className="flex-1 relative overflow-hidden">

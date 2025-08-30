@@ -3,8 +3,12 @@ import { motion } from 'framer-motion'
 import { GiMeditation, GiFlexibleStar } from 'react-icons/gi'
 import { PiChalkboardTeacher } from 'react-icons/pi'
 import { TiTick } from 'react-icons/ti'
+import { useNavigate } from 'react-router-dom'
 
 const BenefitsSection = () => {
+
+  const Navigate = useNavigate();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -106,7 +110,8 @@ const BenefitsSection = () => {
               boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gray-900 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 hover:bg-white hover:text-gray-900 hover:shadow-xl border-2 border-transparent hover:border-gray-900"
+            onClick={()=>Navigate("/LandingAuth")}
+            className="hover:bg-white block mx-auto border border-black hover:text-black px-5 p-3 text-sm rounded-full w-fit h-auto  text-white bg-black font-bold cursor-pointer hover:shadow shadow-gray-500 transition-all duration-300"
           >
             Try for free
           </motion.button>
