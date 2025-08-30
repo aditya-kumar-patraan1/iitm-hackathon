@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-// import LearnMoreBg from "../assets/LearnMoreBg.png";
-// import HeroImage from "../assets/HeroImage.png";
 import gsap from "gsap";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../App.css";
-import GoodMorning from "../assets/HeroImage.png";
+import GoodMorning from "../assets/heroImage.png";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Teacher from "./Teacher";
